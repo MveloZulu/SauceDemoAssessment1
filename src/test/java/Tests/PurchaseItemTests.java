@@ -37,6 +37,7 @@ public class PurchaseItemTests extends Base {
         Thread.sleep(1000);
         //takeScreenshots.takeSnapShot(driver, "Add Items to Cart Page");
         addToCartPage.clickAddToCartBackpackButton();
+
     }
 
     @Test(dependsOnMethods = "addItemsToCartTests")
@@ -134,6 +135,7 @@ public class PurchaseItemTests extends Base {
     @Test(dependsOnMethods = "clickContinueButtonTests")
     public void clickFinishButtonTests() {
         takeScreenshots.takeSnapShot(driver, "Overview Page");
+        overviewPage.VerifyTotal();
         overviewPage.clickFinishButton();
     }
 
